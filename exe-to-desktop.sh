@@ -1,4 +1,6 @@
 #!/bin/sh
+
+#variables
 EXE=$1
 PATH=$(/bin/dirname $EXE)
 EXENAME=$(/bin/basename $EXE)
@@ -10,8 +12,7 @@ LOCATION=$2
 /bin/wrestool -x -t 14 $EXE > ~/Pictures/icons/$EXENAME.ico
 ICON=~/Pictures/icons/$EXENAME.ico
 
-echo "Categories=$CATEGORIES"
-
+#make the .desktop file in the applications menu
 (echo "[Desktop Entry]"
 echo "Categories=$CATEGORIES"
 echo "Comment[en_US]="
@@ -30,6 +31,5 @@ echo "TerminalOptions="
 echo "TryExec=lutris"
 echo "Type=Application"
 echo "X-KDE-SubstituteUID=false"
-echo "X-KDE-Username=") > ~/Desktop/$EXENAME.desktop
+echo "X-KDE-Username=") > ~/.local/share/applications/$EXENAME.desktop
 
-/bin/mv ~/Desktop/$EXENAME.desktop ~/.local/share/applications
