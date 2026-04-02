@@ -1,5 +1,5 @@
 ## What is this and why?
-A script that easilly adds a .exe file to your linux applications menu!
+A script that easily adds a .exe file to your linux applications menu!
 I made this because i wanted an easier way to add .exe files to the application menu and because I was bored
 
 ## Installation
