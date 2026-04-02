@@ -12,7 +12,7 @@ cd exe-to-applicationmenu
 
 ## Usage
 ```
-sh exe-to-desktop.sh path_to_file.exe
+sh exe-to-applicationmenu.sh path_to_file.exe
 ```
 
 If you want to remove the shortcut you just made, open your file manager, go to ~/.local/share/applications and delete it (press Ctrl+H if you don't see the .local directory in your home directory)
