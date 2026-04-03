@@ -6,6 +6,20 @@ PATH=$(/bin/dirname $EXE)
 EXENAME=$(/bin/basename $EXE)
 
 #quiz
+
+CUSTOMNAME=$(/bin/zenity --entry --title="What should be it's name?
+
+(this is what it will be called in the applications menu)
+
+(leave blank if you just want it to be called the name of your executable" )
+
+#set CUSTOMNAME to the executable file name if this question was left blank
+if [ $CUSTOMNAME == ""]
+then
+    CUSTOMNAME=$EXENAME
+fi
+
+
 CATEGORIES=$(/bin/zenity --entry --title="In wich application menu category should I be?
 
 (type 'Game' if you want it to be in the 'Games' menu)" )
@@ -15,7 +29,6 @@ FILETYPE=$(/bin/zenity --entry --title="What type of executeable am I?
 (.sh or .exe)")
 
 #get the .exe icon if its a .exe file, or else it asks for the path to an icon
-echo $FILETYPE
 if [ $FILETYPE == ".exe" ]
 then
     #extract the icon from the .exe
@@ -42,11 +55,11 @@ echo "Comment[en_US]="
 echo "Comment="
 echo "$DESKTOPPROGRAM"
 echo "GenericName[en_US]="
-echo "GenericName="
+echo "GenericName=$CUSTOMNAME"
 echo "Icon=$ICON"
 echo "MimeType="
-echo "Name[en_US]=$EXENAME"
-echo "Name=$EXENAME"
+echo "Name[en_US]=$CUSTOMNAME"
+echo "Name=$CUSTOMNAME"
 echo "Path=$PATH"
 echo "StartupNotify=true"
 echo "Terminal=false"
