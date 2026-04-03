@@ -3,7 +3,7 @@ A script that easily adds executable files (.exe (with wine) and .sh) to your li
 
 It automatically extracts the icon of a .exe file!
 
-I made this because i wanted an easy way to add executable files instead of manually creating a .desktop file to the application menu, and because I was bored
+I made this because i wanted an easy way to add executable files to the application menu instead of manually creating a .desktop file , and because I was bored
 
 ## Installation
 ```
